@@ -1,0 +1,45 @@
+[
+  {
+    "id": "image.import",
+    "script": "tools/images/import_asset.py",
+    "args": [],
+    "fields": {
+      "source": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--source",
+        "path": true
+      },
+      "promptFile": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--prompt-file",
+        "path": true
+      },
+      "provider": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--provider"
+      },
+      "model": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--model"
+      }
+    },
+    "required": [
+      "source",
+      "promptFile",
+      "provider"
+    ],
+    "output": {
+      "flag": "--output",
+      "name": "output"
+    },
+    "description": "image import"
+  }
+]

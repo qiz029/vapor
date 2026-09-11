@@ -1,0 +1,6 @@
+{
+  "duration": 10,
+  "sampleRate": 48000,
+  "channels": 2,
+  "clips": [{"source": "narration.wav", "at": 0}]
+}

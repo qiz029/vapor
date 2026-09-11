@@ -1,0 +1,53 @@
+{
+  "name": "@toddzheng024/vapor-suite",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Vapor Studio profile: media workbench, local Remotion and Modal Qwen visual inspection",
+  "dependencies": {
+    "@toddzheng024/vapor": "0.3.0",
+    "@toddzheng024/vapor-project": "0.3.0",
+    "@toddzheng024/vapor-audio": "0.3.0",
+    "@toddzheng024/vapor-captions": "0.3.0",
+    "@toddzheng024/vapor-editing": "0.3.0",
+    "@toddzheng024/vapor-remotion": "0.3.0",
+    "@toddzheng024/vapor-images": "0.3.0",
+    "@toddzheng024/vapor-review": "0.3.0",
+    "@toddzheng024/vapor-music": "0.3.0",
+    "@toddzheng024/vapor-generation-fal": "0.3.0",
+    "@toddzheng024/vapor-gpu-modal": "0.3.0",
+    "@toddzheng024/vapor-costs": "0.3.0",
+    "@toddzheng024/vapor-regression": "0.3.0",
+    "@toddzheng024/vapor-motion-viggle": "0.3.0",
+    "@toddzheng024/vapor-vlm-modal": "0.3.0"
+  },
+  "dsh": {
+    "profile": {
+      "bundles": [
+        "@toddzheng024/vapor",
+        "@toddzheng024/vapor-project",
+        "@toddzheng024/vapor-audio",
+        "@toddzheng024/vapor-captions",
+        "@toddzheng024/vapor-editing",
+        "@toddzheng024/vapor-remotion",
+        "@toddzheng024/vapor-images",
+        "@toddzheng024/vapor-review",
+        "@toddzheng024/vapor-music",
+        "@toddzheng024/vapor-generation-fal",
+        "@toddzheng024/vapor-gpu-modal",
+        "@toddzheng024/vapor-costs",
+        "@toddzheng024/vapor-regression",
+        "@toddzheng024/vapor-motion-viggle",
+        "@toddzheng024/vapor-vlm-modal"
+      ]
+    },
+    "hub": {
+      "displayName": "Vapor Studio",
+      "summary": "Versioned media workbench with optional local rendering and Modal Qwen review",
+      "compatibility": {
+        "dsh": "0.1.5-rc.1"
+      },
+      "channel": "beta"
+    }
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,17 @@
+{
+  "sourceURL": "",
+  "creator": "",
+  "usageBasis": "",
+  "downloadedFile": "outputs/dance-pilot/source.mp4",
+  "sourceRangeSeconds": [0, 6],
+  "preparedFile": "outputs/dance-pilot/reference.mp4",
+  "songRangeSeconds": null,
+  "accentTimesSeconds": [],
+  "characterImage": "outputs/dance-pilot/character.png",
+  "review": {
+    "motionNaturalness": "not_checked",
+    "beatAlignment": "not_checked",
+    "identityAndClothing": "not_checked",
+    "anatomyAndFeet": "not_checked"
+  }
+}

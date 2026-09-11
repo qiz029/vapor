@@ -1,0 +1,152 @@
+[
+  {
+    "id": "audio.assemble",
+    "script": "tools/audio/timeline.py",
+    "args": [
+      "assemble"
+    ],
+    "fields": {
+      "manifest": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--manifest",
+        "path": true
+      }
+    },
+    "required": [
+      "manifest"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "audio.wav"
+    },
+    "description": "audio assemble"
+  },
+  {
+    "id": "audio.verify",
+    "script": "tools/audio/timeline.py",
+    "args": [
+      "verify"
+    ],
+    "fields": {
+      "video": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--video",
+        "path": true
+      },
+      "expected": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--expected",
+        "path": true
+      }
+    },
+    "required": [
+      "video",
+      "expected"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "result.json"
+    },
+    "description": "audio verify"
+  },
+  {
+    "id": "audio.mux",
+    "script": "tools/audio/timeline.py",
+    "args": [
+      "mux"
+    ],
+    "fields": {
+      "video": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--video",
+        "path": true
+      },
+      "expected": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--expected",
+        "path": true
+      }
+    },
+    "required": [
+      "video",
+      "expected"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "final.mp4"
+    },
+    "description": "audio mux"
+  },
+  {
+    "id": "audio.mix",
+    "script": "tools/audio/mix.py",
+    "args": [
+      "mix"
+    ],
+    "fields": {
+      "project": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--project",
+        "path": true
+      },
+      "manifest": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--manifest",
+        "path": true
+      },
+      "id": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--id"
+      }
+    },
+    "required": [
+      "project",
+      "manifest"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "output"
+    },
+    "description": "audio mix"
+  },
+  {
+    "id": "audio.check",
+    "script": "tools/audio/mix.py",
+    "args": [
+      "check"
+    ],
+    "fields": {
+      "audio": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--audio",
+        "path": true
+      }
+    },
+    "required": [
+      "audio"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "result.json"
+    },
+    "description": "audio check"
+  }
+]

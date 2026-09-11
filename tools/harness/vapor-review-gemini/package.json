@@ -1,0 +1,44 @@
+{
+  "name": "@toddzheng024/vapor-review-gemini",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "peerDependencies": {
+    "@toddzheng024/vapor": "0.3.0"
+  },
+  "description": "gemini.video-review, gemini.style-extract, gemini.music-review",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "hub": {
+      "displayName": "vapor-review-gemini",
+      "summary": "Vapor review gemini tool operations",
+      "compatibility": {
+        "dsh": "0.1.5-rc.1",
+        "platforms": [
+          "darwin",
+          "linux"
+        ]
+      },
+      "entryIds": [
+        "vapor-review-gemini"
+      ],
+      "after": [
+        "@toddzheng024/vapor"
+      ],
+      "channel": "beta"
+    }
+  },
+  "license": "MIT"
+}

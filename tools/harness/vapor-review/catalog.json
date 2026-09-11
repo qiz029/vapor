@@ -1,0 +1,87 @@
+[
+  {
+    "id": "review.evidence",
+    "script": "tools/video/review_evidence.py",
+    "args": [],
+    "fields": {
+      "video": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--video",
+        "path": true
+      },
+      "ranges": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 100,
+        "flag": "--range",
+        "repeat": true,
+        "minItems": 1
+      }
+    },
+    "required": [
+      "video",
+      "ranges"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "output"
+    },
+    "description": "review evidence"
+  },
+  {
+    "id": "review.style-samples",
+    "script": "tools/video/style_samples.py",
+    "args": [],
+    "fields": {
+      "video": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--video",
+        "path": true
+      },
+      "times": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        },
+        "flag": "--time",
+        "repeat": true,
+        "maxItems": 100
+      },
+      "clips": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 100,
+        "flag": "--clip",
+        "repeat": true
+      },
+      "autoCount": {
+        "type": "integer",
+        "flag": "--auto-count",
+        "minimum": 1,
+        "maximum": 100
+      },
+      "columns": {
+        "type": "integer",
+        "flag": "--columns",
+        "minimum": 1,
+        "maximum": 10
+      }
+    },
+    "required": [
+      "video"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "output"
+    },
+    "description": "review style-samples"
+  }
+]

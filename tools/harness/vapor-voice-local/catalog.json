@@ -1,0 +1,149 @@
+[
+  {
+    "id": "voice.doctor",
+    "script": "tools/voice/voice.py",
+    "args": [
+      "doctor"
+    ],
+    "fields": {},
+    "required": [],
+    "output": null,
+    "description": "voice doctor"
+  },
+  {
+    "id": "voice.list",
+    "script": "tools/voice/voice.py",
+    "args": [
+      "list"
+    ],
+    "fields": {},
+    "required": [],
+    "output": null,
+    "description": "voice list"
+  },
+  {
+    "id": "voice.add",
+    "script": "tools/voice/voice.py",
+    "args": [
+      "add"
+    ],
+    "fields": {
+      "name": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": null,
+        "pattern": "^[A-Za-z0-9_-]+$"
+      },
+      "source": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--source",
+        "path": true
+      },
+      "transcript": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--transcript"
+      },
+      "start": {
+        "type": "number",
+        "flag": "--start",
+        "minimum": 0
+      },
+      "duration": {
+        "type": "number",
+        "flag": "--duration",
+        "minimum": 3,
+        "maximum": 30
+      },
+      "language": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--language"
+      },
+      "sourceNote": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--source-note"
+      },
+      "separation": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--separation",
+        "enum": [
+          "demucs",
+          "none"
+        ]
+      }
+    },
+    "required": [
+      "name",
+      "source",
+      "transcript",
+      "sourceNote"
+    ],
+    "output": null,
+    "description": "voice add",
+    "positional": [
+      "name"
+    ]
+  },
+  {
+    "id": "voice.speak",
+    "script": "tools/voice/voice.py",
+    "args": [
+      "speak"
+    ],
+    "fields": {
+      "name": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": null,
+        "pattern": "^[A-Za-z0-9_-]+$"
+      },
+      "textFile": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--text-file",
+        "path": true
+      },
+      "seed": {
+        "type": "integer",
+        "flag": "--seed",
+        "minimum": 0
+      }
+    },
+    "required": [
+      "name",
+      "textFile"
+    ],
+    "output": {
+      "flag": "--output",
+      "name": "speech.wav"
+    },
+    "description": "voice speak",
+    "positional": [
+      "name"
+    ]
+  },
+  {
+    "id": "voice.prepare-model",
+    "script": "tools/voice/prepare_model.py",
+    "args": [],
+    "fields": {},
+    "required": [],
+    "output": null,
+    "description": "voice prepare-model",
+    "remote": "download",
+    "provider": "huggingface",
+    "timeout": 3600000
+  }
+]

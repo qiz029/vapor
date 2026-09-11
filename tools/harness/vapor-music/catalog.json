@@ -1,0 +1,112 @@
+[
+  {
+    "id": "music.options",
+    "script": "tools/music/options.py",
+    "args": [
+      "list"
+    ],
+    "fields": {},
+    "required": [],
+    "output": null,
+    "description": "music options"
+  },
+  {
+    "id": "music.init",
+    "script": "tools/music/options.py",
+    "args": [
+      "init"
+    ],
+    "fields": {
+      "option": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": null,
+        "enum": [
+          "minimax-2.6",
+          "minimax-3",
+          "ace-step-1.5",
+          "vevo2",
+          "original-vs-converted"
+        ]
+      }
+    },
+    "required": [
+      "option"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "result.json"
+    },
+    "description": "music init",
+    "positional": [
+      "option"
+    ]
+  },
+  {
+    "id": "music.generate.validate",
+    "script": "tools/music/fal_generate.py",
+    "args": [],
+    "fields": {
+      "plan": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--plan",
+        "path": true
+      }
+    },
+    "required": [
+      "plan"
+    ],
+    "output": {
+      "flag": "--out",
+      "ledger": true
+    },
+    "description": "music generate (offline validation)",
+    "remote": false,
+    "provider": "fal-music",
+    "dryArgs": [
+      "--dry-run"
+    ],
+    "approvalArgs": [],
+    "recovery": [],
+    "dryOnly": true
+  },
+  {
+    "id": "music.generate",
+    "script": "tools/music/fal_generate.py",
+    "args": [],
+    "fields": {
+      "plan": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--plan",
+        "path": true
+      }
+    },
+    "required": [
+      "plan"
+    ],
+    "output": {
+      "flag": "--out",
+      "ledger": true
+    },
+    "description": "music generate",
+    "remote": "ledger",
+    "provider": "fal-music",
+    "dryArgs": [
+      "--dry-run"
+    ],
+    "approvalArgs": [
+      "--allow-paid"
+    ],
+    "recovery": [
+      "run",
+      "status",
+      "reconcile",
+      "settle"
+    ]
+  }
+]

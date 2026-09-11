@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "demucs-001",
+  "task": "demucs",
+  "input": "song.wav",
+  "gpu": "L4",
+  "budgetUSD": 2.0,
+  "estimatedUSD": 0.5,
+  "reservedUSD": 1.0,
+  "pricingSource": "ILLUSTRATIVE ONLY: replace after checking https://modal.com/pricing",
+  "priceValidThrough": "2000-01-01",
+  "pricingGPU": "L4"
+}

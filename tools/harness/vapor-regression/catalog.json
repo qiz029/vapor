@@ -1,0 +1,81 @@
+[
+  {
+    "id": "regression.run",
+    "script": "tools/regression/run.py",
+    "args": [
+      "run"
+    ],
+    "fields": {},
+    "required": [],
+    "output": {
+      "flag": "--out",
+      "name": "output"
+    },
+    "description": "regression run"
+  },
+  {
+    "id": "regression.compare",
+    "script": "tools/regression/run.py",
+    "args": [
+      "compare"
+    ],
+    "fields": {
+      "before": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--before",
+        "path": true
+      },
+      "after": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--after",
+        "path": true
+      }
+    },
+    "required": [
+      "before",
+      "after"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "result.json"
+    },
+    "description": "regression compare"
+  },
+  {
+    "id": "regression.annotate",
+    "script": "tools/regression/run.py",
+    "args": [
+      "annotate"
+    ],
+    "fields": {
+      "report": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--report",
+        "path": true
+      },
+      "annotations": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--annotations",
+        "path": true
+      }
+    },
+    "required": [
+      "report",
+      "annotations"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "result.json"
+    },
+    "description": "regression annotate",
+    "authority": "user"
+  }
+]

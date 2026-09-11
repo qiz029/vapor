@@ -1,0 +1,421 @@
+[
+  {
+    "id": "project.validate",
+    "script": "tools/project/project.py",
+    "args": [
+      "validate"
+    ],
+    "fields": {
+      "project": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--project",
+        "path": true
+      },
+      "before": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--before",
+        "path": true
+      },
+      "target": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--target"
+      },
+      "checks": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 100,
+        "flag": "--checks"
+      }
+    },
+    "required": [
+      "project"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "result.json"
+    },
+    "description": "project validate"
+  },
+  {
+    "id": "project.snapshot",
+    "script": "tools/project/project.py",
+    "args": [
+      "snapshot"
+    ],
+    "fields": {
+      "project": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--project",
+        "path": true
+      },
+      "before": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--before",
+        "path": true
+      },
+      "target": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--target"
+      },
+      "checks": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 100,
+        "flag": "--checks"
+      }
+    },
+    "required": [
+      "project"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "result.json"
+    },
+    "description": "project snapshot"
+  },
+  {
+    "id": "project.impact",
+    "script": "tools/project/project.py",
+    "args": [
+      "impact"
+    ],
+    "fields": {
+      "project": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--project",
+        "path": true
+      },
+      "before": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--before",
+        "path": true
+      },
+      "target": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--target"
+      },
+      "checks": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 100,
+        "flag": "--checks"
+      }
+    },
+    "required": [
+      "project",
+      "before"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "result.json"
+    },
+    "description": "project impact"
+  },
+  {
+    "id": "project.fingerprint",
+    "script": "tools/project/project.py",
+    "args": [
+      "fingerprint"
+    ],
+    "fields": {
+      "project": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--project",
+        "path": true
+      },
+      "before": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--before",
+        "path": true
+      },
+      "target": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--target"
+      },
+      "checks": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 100,
+        "flag": "--checks"
+      }
+    },
+    "required": [
+      "project",
+      "target",
+      "checks"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "result.json"
+    },
+    "description": "project fingerprint"
+  },
+  {
+    "id": "project.register",
+    "script": "tools/project/workflow.py",
+    "args": [
+      "register"
+    ],
+    "fields": {
+      "project": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--project",
+        "path": true
+      },
+      "source": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--source",
+        "path": true
+      },
+      "id": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--id"
+      },
+      "kind": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--kind"
+      },
+      "producer": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--producer",
+        "enum": [
+          "media-assets",
+          "voice-production",
+          "video-production",
+          "video-style-extraction",
+          "cinematic-director",
+          "video-editing",
+          "music-generation"
+        ]
+      },
+      "dependsOn": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 100,
+        "flag": "--depends-on"
+      },
+      "origin": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--origin"
+      }
+    },
+    "required": [
+      "project",
+      "source",
+      "id",
+      "kind",
+      "producer",
+      "origin"
+    ],
+    "output": null,
+    "description": "project register"
+  },
+  {
+    "id": "project.gate",
+    "script": "tools/project/workflow.py",
+    "args": [
+      "gate"
+    ],
+    "fields": {
+      "project": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--project",
+        "path": true
+      },
+      "target": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--target"
+      },
+      "reviewer": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--reviewer"
+      },
+      "fullPlaybackReviewed": {
+        "type": "boolean",
+        "flag": "--full-playback-reviewed"
+      }
+    },
+    "required": [
+      "project",
+      "target",
+      "reviewer",
+      "fullPlaybackReviewed"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "result.json"
+    },
+    "description": "project gate",
+    "authority": "user"
+  },
+  {
+    "id": "project.repair-plan",
+    "script": "tools/project/workflow.py",
+    "args": [
+      "repair-plan"
+    ],
+    "fields": {
+      "project": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--project",
+        "path": true
+      },
+      "issues": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--issues",
+        "path": true
+      }
+    },
+    "required": [
+      "project",
+      "issues"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "result.json"
+    },
+    "description": "project repair-plan"
+  },
+  {
+    "id": "project.apply-repair",
+    "script": "tools/project/workflow.py",
+    "args": [
+      "apply-repair"
+    ],
+    "fields": {
+      "project": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--project",
+        "path": true
+      },
+      "plan": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--plan",
+        "path": true
+      },
+      "asset": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--asset"
+      },
+      "source": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--source",
+        "path": true
+      },
+      "origin": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--origin"
+      }
+    },
+    "required": [
+      "project",
+      "plan",
+      "asset",
+      "source",
+      "origin"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "result.json"
+    },
+    "description": "project apply-repair"
+  },
+  {
+    "id": "project.recheck",
+    "script": "tools/project/workflow.py",
+    "args": [
+      "recheck"
+    ],
+    "fields": {
+      "project": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--project",
+        "path": true
+      },
+      "plan": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--plan",
+        "path": true
+      }
+    },
+    "required": [
+      "project",
+      "plan"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "result.json"
+    },
+    "description": "project recheck"
+  }
+]

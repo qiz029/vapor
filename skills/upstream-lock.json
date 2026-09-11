@@ -1,0 +1,31 @@
+{
+  "remotion-best-practices": {
+    "repository": "https://github.com/remotion-dev/skills",
+    "commit": "f54682712abc4a68cdc7c41513bd3b3298829873",
+    "path": "skills/remotion-best-practices",
+    "files": 137,
+    "local_changes": false
+  },
+  "video-use": {
+    "repository": "https://github.com/browser-use/video-use",
+    "commit": "9575612f066aa517354790a645fd90f9f95a743b",
+    "path": "tools/vendor/video-use",
+    "files": 13,
+    "local_changes": false,
+    "sha256": {
+      "LICENSE": "5afa3d97bf1e6f998d587fa101e3fe0d0c416840b7fe77bcd6ae97690a334631",
+      "README.md": "612bca23557cfc4501e80d3ce4babbe086dba77a70fa3a74ae5c0170393ece8f",
+      "SKILL.md": "37b24f7ec55473996c3eecd5ffb4d62ee4021f2c9bc947da49483cc5c65fe4eb",
+      "install.md": "9a78c92932864a728cfe80700d1a6bd5a4c4b4cf2d3f4694f3fd53b49fc93394",
+      "pyproject.toml": "4b27fdf0275016a5427416ee9a939ed5c8a756af02427394478d416b0909632d",
+      "helpers/grade.py": "f5df58e81f31c95a621ffba5973fd866f6662fc481a36ebd37a2e68eb81220c2",
+      "helpers/pack_transcripts.py": "f9e419def5f0a014d5e1fd16fdad801013ae068854c1d474c3492297e2304f4b",
+      "helpers/render.py": "10b886f399e95d940b80c7dff597a76e304c9427c3fd915bf6492942cdc4166d",
+      "helpers/timeline_view.py": "69aee88e4204f86127740cca9de6a6eaa75a558df1bb07745dd62f69a3c2e9cf",
+      "helpers/transcribe.py": "5b61a5f92db9baf6e7f7f3ee88d0afaed8485e5f7b537a38e90f87ce8c76e58a",
+      "helpers/transcribe_batch.py": "fcb240f1f2fc422df01d09c2a53335e0b61fa110aac924f9c479c685a52882a1",
+      "tests/test_render_fps.py": "16704cebba3a34371fdcac2bed079a0012c609e0373694beb81444ecb30a12dc",
+      "tests/test_render_orientation.py": "9bdd7c473b28bd79d009057fd3cb6767b441b2e4cc47f3d63932c975a93c7912"
+    }
+  }
+}

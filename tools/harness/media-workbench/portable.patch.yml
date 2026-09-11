@@ -1,0 +1,20 @@
+- insert:
+    - id: media-workbench
+      name: '@toddzheng024/vapor'
+- id: connection
+  config:
+    cookieMaxAgeDays: 365
+- id: agent-presets
+  config:
+    default: vapor
+    roots:
+      - path: !!js process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(ctx.baseUrl).resolve('@toddzheng024/vapor/preset')))
+        trust: system
+
+# Creative surface: no developer trajectory tab.
+- id: ui-trajectory
+  disabled: true
+
+# Project assets are managed in the left sidebar.
+- id: ui-sidebar-files
+  disabled: true

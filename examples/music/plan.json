@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "calm-explainer-a",
+  "endpoint": "fal-ai/minimax-music/v2.6",
+  "budgetUSD": 1.0,
+  "estimatedUSD": 0.1,
+  "reservedUSD": 0.2,
+  "pricingSource": "ILLUSTRATIVE ONLY: replace with verified https://fal.ai/models/fal-ai/minimax-music/v2.6 pricing",
+  "priceValidThrough": "2000-01-01",
+  "input": {
+    "prompt": "Gentle instrumental underscore for a technology explainer, warm piano and restrained soft synthesizers, calm steady pulse, sparse arrangement with room for narration, subtle opening and a resolved ending.",
+    "is_instrumental": true,
+    "lyrics_optimizer": false,
+    "audio_setting": {"format": "wav", "sample_rate": 44100, "bitrate": 256000}
+  }
+}

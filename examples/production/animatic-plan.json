@@ -1,0 +1,12 @@
+{
+  "id": "animatic",
+  "fps": 30,
+  "width": 1280,
+  "height": 720,
+  "voice": "Samantha",
+  "wordsPerMinute": 175,
+  "beats": [
+    {"narration": "request", "shot": "request", "hold": 0.4},
+    {"narration": "return", "shot": "return", "hold": 0.6}
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "kind": "music-experiment",
+  "status": "planned-not-deployed",
+  "sourceAudio": null,
+  "sourceSha256": null,
+  "budgetUSD": null,
+  "actualUSD": null,
+  "fullListeningReviewed": false,
+  "acceptance": [
+    "Chinese diction and complete lyrics",
+    "Melody and timing preservation where required",
+    "Natural transitions",
+    "Loudness-matched blind listening"
+  ],
+  "productionReplacementAllowed": false,
+  "option": "vevo2",
+  "backend": "Modal candidate; adapter not implemented",
+  "task": "singing-lyric-edit",
+  "sourceDurationSeconds": 15,
+  "targetLyrics": null,
+  "reference": "https://huggingface.co/RMSnow/Vevo2",
+  "next": [
+    "Pin Amphion recipe and model revision",
+    "Implement isolated worker with durable receipts",
+    "First change one lyric phrase; assess diction, pitch and timbre before style conversion"
+  ]
+}

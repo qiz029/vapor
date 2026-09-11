@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "kind": "music-experiment",
+  "status": "planned-not-deployed",
+  "sourceAudio": null,
+  "sourceSha256": null,
+  "budgetUSD": null,
+  "actualUSD": null,
+  "fullListeningReviewed": false,
+  "acceptance": [
+    "Chinese diction and complete lyrics",
+    "Melody and timing preservation where required",
+    "Natural transitions",
+    "Loudness-matched blind listening"
+  ],
+  "productionReplacementAllowed": false,
+  "option": "ace-step-1.5",
+  "backend": "Modal candidate; adapter not implemented",
+  "task": "repaint",
+  "sourceDurationSeconds": 30,
+  "editRangeSeconds": [
+    10,
+    18
+  ],
+  "prompt": "Change only the selected vocal phrase; retain the surrounding arrangement.",
+  "reference": "https://github.com/ace-step/ACE-Step-1.5",
+  "next": [
+    "Pin upstream revision and compatible checkpoint",
+    "Implement isolated worker with durable receipts",
+    "Verify unchanged regions and both edit boundaries"
+  ]
+}

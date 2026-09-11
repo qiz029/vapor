@@ -1,0 +1,3 @@
+- insert:
+    - id: vapor-gpu-modal
+      name: '@toddzheng024/vapor-gpu-modal'

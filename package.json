@@ -1,0 +1,31 @@
+{
+  "name": "vapor-source",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "node tools/harness/distribution/build.mjs outputs/candidate https://github.com/qiz029/vapor",
+    "test": "node --test tools/harness/media-workbench/tests/*.test.js tools/harness/distribution/install-local.test.mjs"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.521",
+    "@remotion/cli": "4.0.521",
+    "@remotion/renderer": "4.0.521",
+    "remotion": "4.0.521",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "22.15.30",
+    "@types/react": "19.1.6",
+    "@types/react-dom": "19.1.6",
+    "tsx": "4.20.3",
+    "typescript": "5.8.3"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qiz029/vapor.git"
+  }
+}

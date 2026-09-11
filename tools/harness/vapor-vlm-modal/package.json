@@ -1,0 +1,44 @@
+{
+  "name": "@toddzheng024/vapor-vlm-modal",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Version-bound image and sampled-video review through Modal Qwen, with batch approval and durable recovery",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./tools": "./tools.js"
+  },
+  "files": [
+    "*.js",
+    "cordis.patch.yml",
+    "python",
+    "requirements.txt",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "dsh": {
+    "engines": {
+      "dsh": "0.1.5-rc.1"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "hub": {
+      "displayName": "Vapor · Modal Qwen",
+      "summary": "Batch visual inspection with source versions, explicit coverage and recoverable cloud jobs",
+      "compatibility": {
+        "dsh": "0.1.5-rc.1"
+      },
+      "after": [
+        "@toddzheng024/vapor"
+      ],
+      "entryIds": [
+        "vapor-vlm-modal"
+      ],
+      "channel": "beta"
+    }
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "smoke-a100-40gb",
+  "task": "gpu-smoke",
+  "gpu": "A100-40GB",
+  "budgetUSD": 1.0,
+  "estimatedUSD": 0.1,
+  "reservedUSD": 0.5,
+  "pricingSource": "ILLUSTRATIVE ONLY: verify A100-40GB GPU, CPU, RAM and runtime at https://modal.com/pricing",
+  "priceValidThrough": "2000-01-01",
+  "pricingGPU": "A100-40GB"
+}

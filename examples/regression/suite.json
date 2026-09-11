@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "portrait-captions",
+      "manifest": {
+        "schemaVersion": 1,
+        "title": "Media regression",
+        "width": 360,
+        "height": 640,
+        "fps": 24,
+        "duration": 3,
+        "scenes": [
+          {
+            "start": 0,
+            "end": 3,
+            "title": "Caption layout",
+            "body": "Portrait safe area"
+          }
+        ],
+        "captions": [
+          {
+            "start": 0.2,
+            "end": 2.8,
+            "text": "A readable caption stays within the safe area."
+          }
+        ]
+      },
+      "expectations": [
+        "Caption readable and unclipped",
+        "No full listening requirement: silent fixture"
+      ]
+    },
+    {
+      "id": "flow-landscape",
+      "manifest": {
+        "schemaVersion": 1,
+        "title": "Media regression",
+        "width": 640,
+        "height": 360,
+        "fps": 24,
+        "duration": 4,
+        "scenes": [
+          {
+            "start": 0,
+            "end": 4,
+            "title": "Request and result",
+            "visual": {
+              "kind": "flow",
+              "nodes": [
+                {
+                  "id": "model",
+                  "label": "Model",
+                  "icon": "model"
+                },
+                {
+                  "id": "tool",
+                  "label": "Tool",
+                  "icon": "tool"
+                }
+              ],
+              "steps": [
+                {
+                  "from": "model",
+                  "to": "tool",
+                  "at": 0.5,
+                  "duration": 1,
+                  "label": "Request"
+                },
+                {
+                  "from": "tool",
+                  "to": "model",
+                  "at": 2,
+                  "duration": 1,
+                  "label": "Result"
+                }
+              ]
+            }
+          }
+        ],
+        "captions": []
+      },
+      "expectations": [
+        "Request travels model to tool before result returns",
+        "Labels readable throughout action"
+      ]
+    },
+    {
+      "id": "audio-captions",
+      "manifest": {
+        "schemaVersion": 1,
+        "title": "Media regression",
+        "width": 640,
+        "height": 360,
+        "fps": 24,
+        "duration": 3,
+        "scenes": [
+          {
+            "start": 0,
+            "end": 3,
+            "title": "Picture master",
+            "body": "No baked-in subtitles"
+          }
+        ],
+        "captions": []
+      },
+      "expectations": [
+        "One final audio stream matches expected mix",
+        "Selectable subtitles survive round-trip",
+        "Tone fixture cannot establish speech or naturalness"
+      ]
+    }
+  ]
+}

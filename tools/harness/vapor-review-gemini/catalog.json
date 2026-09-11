@@ -1,0 +1,140 @@
+[
+  {
+    "id": "gemini.video-review",
+    "script": "tools/video/vlm_review.py",
+    "args": [],
+    "fields": {
+      "video": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--video",
+        "path": true
+      },
+      "contract": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--contract",
+        "path": true
+      },
+      "processing": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--processing",
+        "enum": [
+          "static",
+          "agentic"
+        ]
+      },
+      "fps": {
+        "type": "number",
+        "flag": "--fps",
+        "minimum": 0.1,
+        "maximum": 30
+      }
+    },
+    "required": [
+      "video",
+      "contract"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "output"
+    },
+    "description": "gemini video-review",
+    "remote": "metered",
+    "provider": "gemini"
+  },
+  {
+    "id": "gemini.style-extract",
+    "script": "tools/video/vlm_style_extract.py",
+    "args": [],
+    "fields": {
+      "video": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--video",
+        "path": true
+      },
+      "manifest": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--manifest",
+        "path": true
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--title"
+      },
+      "referenceUrl": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--reference-url"
+      },
+      "brief": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--brief"
+      },
+      "processing": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--processing",
+        "enum": [
+          "static",
+          "agentic"
+        ]
+      },
+      "fps": {
+        "type": "number",
+        "flag": "--fps",
+        "minimum": 0.1,
+        "maximum": 30
+      }
+    },
+    "required": [
+      "video",
+      "title"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "output"
+    },
+    "description": "gemini style-extract",
+    "remote": "metered",
+    "provider": "gemini"
+  },
+  {
+    "id": "gemini.music-review",
+    "script": "tools/music/gemini_review.py",
+    "args": [],
+    "fields": {
+      "audio": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--audio",
+        "path": true
+      }
+    },
+    "required": [
+      "audio"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "output"
+    },
+    "description": "gemini music-review",
+    "remote": "metered",
+    "provider": "gemini"
+  }
+]

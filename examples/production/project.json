@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "project": {
+    "id": "tool-call",
+    "title": "Tool call timing pilot",
+    "brief": "Show a request followed by the tool result.",
+    "dependsOn": []
+  },
+  "narrations": [
+    {
+      "id": "request",
+      "text": "The model sends a structured request to the tool.",
+      "dependsOn": [
+        "project:tool-call"
+      ]
+    },
+    {
+      "id": "return",
+      "text": "The tool returns its result, and the model prepares an answer.",
+      "dependsOn": [
+        "project:tool-call"
+      ]
+    }
+  ],
+  "shots": [
+    {
+      "id": "request",
+      "intent": "1. Send the request",
+      "visual": "A request travels from the model to the tool.",
+      "dependsOn": [
+        "narration:request"
+      ]
+    },
+    {
+      "id": "return",
+      "intent": "2. Return the result",
+      "visual": "The result travels back to the model.",
+      "dependsOn": [
+        "narration:return"
+      ]
+    }
+  ],
+  "assets": [],
+  "checks": [],
+  "approvals": []
+}

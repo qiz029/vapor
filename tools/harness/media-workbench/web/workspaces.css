@@ -1,0 +1,9 @@
+#workspace-nav{display:flex;gap:8px;padding:18px 0;position:sticky;top:0;background:#111719;z-index:2}
+#workspace-nav button{flex:1;border-radius:12px;padding:12px;font-weight:650}
+#workspace-nav button[aria-pressed=true]{background:#c7f77b;color:#172015;border-color:#c7f77b}
+#library-capabilities,#lab-capabilities,#library-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0}
+#workspace-library .job,#workspace-lab .job{display:block;padding:18px;border:1px solid #33413c;border-radius:16px;background:linear-gradient(140deg,#1c2725,#151d1e)}
+#workspace-library button,#workspace-lab button{margin-top:12px;white-space:normal}
+#lab-source{display:block;width:100%;margin:12px 0}
+#lab-reference{overflow-wrap:anywhere}
+@media(max-width:540px){#library-capabilities,#lab-capabilities,#library-items{grid-template-columns:1fr}}

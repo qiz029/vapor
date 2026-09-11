@@ -1,0 +1,8 @@
+{
+  "title": "My film",
+  "duration": 10,
+  "audio": "mix.wav",
+  "scenes": [{"start": 0, "end": 10, "image": "reference.png", "word": "My film", "layout": "center"}],
+  "captions": [{"start": 1, "end": 5, "text": "Replace with your approved lyric"}],
+  "accents": []
+}

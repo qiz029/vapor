@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "music-experiment",
+  "status": "planned-not-deployed",
+  "sourceAudio": null,
+  "sourceSha256": null,
+  "budgetUSD": null,
+  "actualUSD": null,
+  "fullListeningReviewed": false,
+  "acceptance": [
+    "Chinese diction and complete lyrics",
+    "Melody and timing preservation where required",
+    "Natural transitions",
+    "Loudness-matched blind listening"
+  ],
+  "productionReplacementAllowed": false,
+  "option": "original-vs-converted",
+  "backend": "Local evaluation protocol; no automated runner",
+  "task": "blind-listening",
+  "sourceDurationSeconds": 20,
+  "candidates": {
+    "originalMix": null,
+    "convertedRemix": null
+  },
+  "next": [
+    "Choose the same complete verse-to-chorus excerpt",
+    "Measure and match integrated loudness without clipping",
+    "Randomize labels; retain private source mapping and hashes",
+    "Record human preference and reasons before selecting a production chain"
+  ]
+}

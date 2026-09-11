@@ -1,0 +1,117 @@
+[
+  {
+    "id": "motion.doctor",
+    "script": "tools/motion/viggle.py",
+    "args": [
+      "doctor"
+    ],
+    "fields": {},
+    "required": [],
+    "output": null,
+    "description": "motion doctor"
+  },
+  {
+    "id": "motion.credits",
+    "script": "tools/motion/viggle.py",
+    "args": [
+      "credits"
+    ],
+    "fields": {},
+    "required": [],
+    "output": null,
+    "description": "motion credits",
+    "remote": "download",
+    "provider": "viggle"
+  },
+  {
+    "id": "motion.plan",
+    "script": "tools/motion/viggle.py",
+    "args": [
+      "plan"
+    ],
+    "fields": {
+      "kind": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--kind",
+        "enum": [
+          "remix",
+          "mocap"
+        ]
+      },
+      "video": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--video",
+        "path": true
+      },
+      "image": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--image",
+        "path": true
+      },
+      "budgetUSD": {
+        "type": "number",
+        "flag": "--budget-usd",
+        "minimum": 0.001
+      }
+    },
+    "required": [
+      "kind",
+      "video",
+      "budgetUSD"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "result.json"
+    },
+    "description": "motion plan"
+  },
+  {
+    "id": "motion.submit",
+    "script": "tools/motion/viggle.py",
+    "args": [
+      "submit"
+    ],
+    "fields": {
+      "plan": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--plan",
+        "path": true
+      },
+      "skeleton": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": null,
+        "enum": [
+          "mixamo",
+          "metahuman"
+        ]
+      }
+    },
+    "required": [
+      "plan"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "output"
+    },
+    "description": "motion submit",
+    "remote": "viggle",
+    "provider": "viggle",
+    "recovery": [
+      "run",
+      "status",
+      "reconcile",
+      "settle",
+      "mark-terminal"
+    ]
+  }
+]

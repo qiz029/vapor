@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "rough-cut",
+  "fps": 24,
+  "sources": {
+    "a": {"asset": "asset:take-a", "speech": true, "transcript": "asset:take-a-transcript", "audioTrack": 0},
+    "b": {"asset": "asset:take-b", "speech": false}
+  },
+  "ranges": [
+    {"source": "a", "start": 0.5, "end": 1.5, "reason": "Keep the complete opening phrase."},
+    {"source": "b", "start": 0.25, "end": 1.25, "reason": "Follow with the result shot."}
+  ],
+  "grade": "none",
+  "overlays": [],
+  "subtitleMode": "soft"
+}

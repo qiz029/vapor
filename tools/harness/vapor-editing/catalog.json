@@ -1,0 +1,229 @@
+[
+  {
+    "id": "editing.validate",
+    "script": "tools/video/editing/edit.py",
+    "args": [
+      "validate"
+    ],
+    "fields": {
+      "project": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--project",
+        "path": true
+      },
+      "edl": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--edl",
+        "path": true
+      },
+      "draft": {
+        "type": "boolean",
+        "flag": "--draft"
+      }
+    },
+    "required": [
+      "project",
+      "edl"
+    ],
+    "output": null,
+    "description": "editing validate"
+  },
+  {
+    "id": "editing.render",
+    "script": "tools/video/editing/edit.py",
+    "args": [
+      "render"
+    ],
+    "fields": {
+      "project": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--project",
+        "path": true
+      },
+      "edl": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--edl",
+        "path": true
+      },
+      "draft": {
+        "type": "boolean",
+        "flag": "--draft"
+      }
+    },
+    "required": [
+      "project",
+      "edl"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "output"
+    },
+    "description": "editing render"
+  },
+  {
+    "id": "editing.view",
+    "script": "tools/video/editing/edit.py",
+    "args": [
+      "view"
+    ],
+    "fields": {
+      "project": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--project",
+        "path": true
+      },
+      "asset": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--asset"
+      },
+      "start": {
+        "type": "number",
+        "flag": "--start",
+        "minimum": 0
+      },
+      "end": {
+        "type": "number",
+        "flag": "--end",
+        "minimum": 0
+      },
+      "transcript": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--transcript"
+      }
+    },
+    "required": [
+      "project",
+      "asset",
+      "start",
+      "end"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "output"
+    },
+    "description": "editing view"
+  },
+  {
+    "id": "video.finalize",
+    "script": "tools/video/finalize.py",
+    "args": [],
+    "fields": {
+      "project": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--project",
+        "path": true
+      },
+      "picture": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--picture",
+        "path": true
+      },
+      "audio": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--audio",
+        "path": true
+      },
+      "alignment": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--alignment",
+        "path": true
+      },
+      "pictureAsset": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--picture-asset"
+      },
+      "audioAsset": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--audio-asset"
+      },
+      "captionsAsset": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--captions-asset"
+      },
+      "id": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--id"
+      }
+    },
+    "required": [
+      "project",
+      "picture",
+      "audio",
+      "alignment",
+      "pictureAsset",
+      "audioAsset"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "output"
+    },
+    "description": "video finalize"
+  },
+  {
+    "id": "video.import-timeline",
+    "script": "tools/video/import_timeline.py",
+    "args": [],
+    "fields": {
+      "timeline": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--timeline",
+        "path": true
+      },
+      "audio": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--audio",
+        "path": true
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--title"
+      }
+    },
+    "required": [
+      "timeline",
+      "audio",
+      "title"
+    ],
+    "output": {
+      "flag": "--output",
+      "name": "manifest.json"
+    },
+    "description": "video import-timeline"
+  }
+]

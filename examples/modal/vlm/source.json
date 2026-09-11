@@ -1,0 +1,12 @@
+{
+  "shots": [
+    {
+      "id": "shot-01",
+      "video": "clip.mp4",
+      "start": 0,
+      "end": 5,
+      "expected": "Describe the visible action and any evidenced mismatch with this shot's intended action.",
+      "neighbours": "Only include context relevant to this shot."
+    }
+  ]
+}

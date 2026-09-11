@@ -1,0 +1,11 @@
+{
+  "id": "visual-review-01",
+  "input": "frames.zip",
+  "modelRevision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+  "budgetUSD": 2,
+  "estimatedUSD": 0.2,
+  "reservedUSD": 1,
+  "pricingSource": "https://modal.com/pricing",
+  "priceValidThrough": "2000-01-01",
+  "userAuthorization": null
+}

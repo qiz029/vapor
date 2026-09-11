@@ -1,0 +1,75 @@
+[
+  {
+    "id": "gpu.execute.validate",
+    "script": "tools/gpu/modal_jobs.py",
+    "args": [
+      "run"
+    ],
+    "fields": {
+      "plan": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--plan",
+        "path": true
+      }
+    },
+    "required": [
+      "plan"
+    ],
+    "output": {
+      "flag": "--out",
+      "ledger": true
+    },
+    "description": "gpu execute (offline validation)",
+    "remote": false,
+    "provider": "modal",
+    "dryArgs": [
+      "plan"
+    ],
+    "dryReplace": true,
+    "approvalArgs": [],
+    "recovery": [],
+    "dryOnly": true
+  },
+  {
+    "id": "gpu.execute",
+    "script": "tools/gpu/modal_jobs.py",
+    "args": [
+      "run"
+    ],
+    "fields": {
+      "plan": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--plan",
+        "path": true
+      }
+    },
+    "required": [
+      "plan"
+    ],
+    "output": {
+      "flag": "--out",
+      "ledger": true
+    },
+    "description": "gpu execute",
+    "remote": "ledger",
+    "provider": "modal",
+    "dryArgs": [
+      "plan"
+    ],
+    "dryReplace": true,
+    "approvalArgs": [
+      "--allow-paid"
+    ],
+    "recovery": [
+      "run",
+      "status",
+      "reconcile",
+      "settle",
+      "mark-terminal"
+    ]
+  }
+]

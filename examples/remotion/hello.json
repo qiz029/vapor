@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "title": "Agent Media Lab",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "duration": 6,
+  "scenes": [
+    {"start": 0, "end": 3, "title": "让想法动起来", "body": "从制作意图，到可检查的作品。", "points": ["Skill 决定制作流程", "工具执行可重复的操作"], "accent": "#7de2c3"},
+    {"start": 3, "end": 6, "title": "先看，再交付", "body": "Remotion · React · 本地渲染", "points": ["检查关键画面与字幕", "完整试听与播放验收"], "accent": "#aab9ff"}
+  ],
+  "captions": [
+    {"start": 0.3, "end": 2.9, "text": "制作流程与执行工具，各自清晰。"},
+    {"start": 3.2, "end": 5.8, "text": "渲染完成之后，还需要检查作品。"}
+  ]
+}

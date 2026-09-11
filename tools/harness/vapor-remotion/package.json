@@ -1,0 +1,16 @@
+{
+  "name": "@toddzheng024/vapor-remotion",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "exports": "./index.js",
+  "dsh": {
+    "engines": {
+      "dsh": "0.1.5-rc.1"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT"
+}

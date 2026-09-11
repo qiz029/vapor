@@ -1,0 +1,194 @@
+[
+  {
+    "id": "captions.align",
+    "script": "tools/captions/align.py",
+    "args": [],
+    "fields": {
+      "project": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--project",
+        "path": true
+      },
+      "audio": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--audio",
+        "path": true
+      },
+      "alignment": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--alignment",
+        "path": true
+      },
+      "audioAsset": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--audio-asset"
+      },
+      "id": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--id"
+      }
+    },
+    "required": [
+      "project",
+      "audio",
+      "alignment",
+      "audioAsset"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "output"
+    },
+    "description": "captions align"
+  },
+  {
+    "id": "transcript.import",
+    "script": "tools/video/editing/transcripts.py",
+    "args": [
+      "import"
+    ],
+    "fields": {
+      "project": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--project",
+        "path": true
+      },
+      "source": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--source"
+      },
+      "id": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--id"
+      },
+      "input": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--input",
+        "path": true
+      },
+      "origin": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--origin"
+      },
+      "audioTrack": {
+        "type": "integer",
+        "flag": "--audio-track",
+        "minimum": 0
+      }
+    },
+    "required": [
+      "project",
+      "source",
+      "id",
+      "input",
+      "origin"
+    ],
+    "output": null,
+    "description": "transcript import"
+  },
+  {
+    "id": "transcript.pack",
+    "script": "tools/video/editing/transcripts.py",
+    "args": [
+      "pack"
+    ],
+    "fields": {
+      "project": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--project",
+        "path": true
+      },
+      "transcripts": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 100,
+        "flag": "--transcripts"
+      }
+    },
+    "required": [
+      "project",
+      "transcripts"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "transcripts.md"
+    },
+    "description": "transcript pack"
+  },
+  {
+    "id": "transcript.scribe",
+    "script": "tools/video/editing/transcripts.py",
+    "args": [
+      "cloud"
+    ],
+    "fields": {
+      "project": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--project",
+        "path": true
+      },
+      "source": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--source"
+      },
+      "id": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--id"
+      },
+      "audioTrack": {
+        "type": "integer",
+        "flag": "--audio-track",
+        "minimum": 0
+      },
+      "language": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--language"
+      }
+    },
+    "required": [
+      "project",
+      "source",
+      "id"
+    ],
+    "output": null,
+    "description": "transcript scribe",
+    "remote": "metered",
+    "provider": "elevenlabs",
+    "approvalArgs": [
+      "--allow-upload"
+    ],
+    "budgetArgs": true,
+    "timeout": 1900000
+  }
+]

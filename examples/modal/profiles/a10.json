@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "smoke-a10",
+  "task": "gpu-smoke",
+  "gpu": "A10",
+  "budgetUSD": 1.0,
+  "estimatedUSD": 0.1,
+  "reservedUSD": 0.5,
+  "pricingSource": "ILLUSTRATIVE ONLY: verify A10 GPU, CPU, RAM and runtime at https://modal.com/pricing",
+  "priceValidThrough": "2000-01-01",
+  "pricingGPU": "A10"
+}

@@ -1,0 +1,191 @@
+[
+  {
+    "id": "video.generate-minimax-h3.validate",
+    "script": "tools/video/fal_generate.py",
+    "args": [],
+    "fields": {
+      "plan": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--plan",
+        "path": true
+      }
+    },
+    "required": [
+      "plan"
+    ],
+    "output": {
+      "flag": "--out",
+      "ledger": true
+    },
+    "description": "video generate-minimax-h3 (offline validation)",
+    "remote": false,
+    "provider": "fal-video",
+    "dryArgs": [
+      "--dry-run"
+    ],
+    "recovery": [],
+    "dryOnly": true,
+    "approvalArgs": []
+  },
+  {
+    "id": "video.generate-minimax-h3",
+    "script": "tools/video/fal_generate.py",
+    "args": [],
+    "fields": {
+      "plan": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--plan",
+        "path": true
+      }
+    },
+    "required": [
+      "plan"
+    ],
+    "output": {
+      "flag": "--out",
+      "ledger": true
+    },
+    "description": "video generate-minimax-h3",
+    "remote": "ledger",
+    "provider": "fal-video",
+    "dryArgs": [
+      "--dry-run"
+    ],
+    "recovery": [
+      "run",
+      "status",
+      "reconcile",
+      "settle"
+    ]
+  },
+  {
+    "id": "video.generate-seedance.validate",
+    "script": "tools/video/fal_seedance_generate.py",
+    "args": [],
+    "fields": {
+      "plan": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--plan",
+        "path": true
+      }
+    },
+    "required": [
+      "plan"
+    ],
+    "output": {
+      "flag": "--out",
+      "ledger": true
+    },
+    "description": "video generate-seedance (offline validation)",
+    "remote": false,
+    "provider": "fal-video",
+    "dryArgs": [
+      "--dry-run"
+    ],
+    "recovery": [],
+    "dryOnly": true,
+    "approvalArgs": []
+  },
+  {
+    "id": "video.generate-seedance",
+    "script": "tools/video/fal_seedance_generate.py",
+    "args": [],
+    "fields": {
+      "plan": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--plan",
+        "path": true
+      }
+    },
+    "required": [
+      "plan"
+    ],
+    "output": {
+      "flag": "--out",
+      "ledger": true
+    },
+    "description": "video generate-seedance",
+    "remote": "ledger",
+    "provider": "fal-video",
+    "dryArgs": [
+      "--dry-run"
+    ],
+    "recovery": [
+      "run",
+      "status",
+      "reconcile",
+      "settle"
+    ]
+  },
+  {
+    "id": "video.generate-seedance25.validate",
+    "script": "tools/video/fal_seedance25_generate.py",
+    "args": [],
+    "fields": {
+      "plan": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--plan",
+        "path": true
+      }
+    },
+    "required": [
+      "plan"
+    ],
+    "output": {
+      "flag": "--out",
+      "ledger": true
+    },
+    "description": "video generate-seedance25 (offline validation)",
+    "remote": false,
+    "provider": "fal-video",
+    "dryArgs": [
+      "--dry-run"
+    ],
+    "recovery": [],
+    "dryOnly": true,
+    "approvalArgs": []
+  },
+  {
+    "id": "video.generate-seedance25",
+    "script": "tools/video/fal_seedance25_generate.py",
+    "args": [],
+    "fields": {
+      "plan": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--plan",
+        "path": true
+      }
+    },
+    "required": [
+      "plan"
+    ],
+    "output": {
+      "flag": "--out",
+      "ledger": true
+    },
+    "description": "video generate-seedance25",
+    "remote": "ledger",
+    "provider": "fal-video",
+    "dryArgs": [
+      "--dry-run"
+    ],
+    "recovery": [
+      "run",
+      "status",
+      "reconcile",
+      "settle"
+    ]
+  }
+]

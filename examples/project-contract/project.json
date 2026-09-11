@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "project": {
+    "id": "tool-call",
+    "title": "工具调用",
+    "brief": "展示请求、工具执行与结果返回。",
+    "dependsOn": []
+  },
+  "narrations": [
+    {
+      "id": "request",
+      "text": "模型把请求交给工具。",
+      "dependsOn": [
+        "project:tool-call"
+      ]
+    },
+    {
+      "id": "return",
+      "text": "工具把结果返回模型。",
+      "dependsOn": [
+        "project:tool-call"
+      ]
+    }
+  ],
+  "shots": [
+    {
+      "id": "request",
+      "intent": "解释 request",
+      "visual": "固定节点之间的定向传递",
+      "dependsOn": [
+        "narration:request"
+      ]
+    },
+    {
+      "id": "return",
+      "intent": "解释 return",
+      "visual": "固定节点之间的定向传递",
+      "dependsOn": [
+        "narration:return"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "request-voice",
+      "kind": "narration",
+      "producer": "voice-production",
+      "path": "artifacts/request-voice.txt",
+      "sha256": null,
+      "source": "portable example; planned artifact only",
+      "dependsOn": [
+        "narration:request"
+      ]
+    },
+    {
+      "id": "request-clip",
+      "kind": "video",
+      "producer": "video-production",
+      "path": "artifacts/request-clip.txt",
+      "sha256": null,
+      "source": "portable example; planned artifact only",
+      "dependsOn": [
+        "shot:request"
+      ]
+    },
+    {
+      "id": "request-captions",
+      "kind": "captions",
+      "producer": "video-production",
+      "path": "artifacts/request-captions.txt",
+      "sha256": null,
+      "source": "portable example; planned artifact only",
+      "dependsOn": [
+        "narration:request",
+        "asset:request-voice"
+      ]
+    },
+    {
+      "id": "return-voice",
+      "kind": "narration",
+      "producer": "voice-production",
+      "path": "artifacts/return-voice.txt",
+      "sha256": null,
+      "source": "portable example; planned artifact only",
+      "dependsOn": [
+        "narration:return"
+      ]
+    },
+    {
+      "id": "return-clip",
+      "kind": "video",
+      "producer": "video-production",
+      "path": "artifacts/return-clip.txt",
+      "sha256": null,
+      "source": "portable example; planned artifact only",
+      "dependsOn": [
+        "shot:return"
+      ]
+    },
+    {
+      "id": "return-captions",
+      "kind": "captions",
+      "producer": "video-production",
+      "path": "artifacts/return-captions.txt",
+      "sha256": null,
+      "source": "portable example; planned artifact only",
+      "dependsOn": [
+        "narration:return",
+        "asset:return-voice"
+      ]
+    },
+    {
+      "id": "mix",
+      "kind": "audio",
+      "producer": "voice-production",
+      "path": "artifacts/mix.txt",
+      "sha256": null,
+      "source": "portable example; planned artifact only",
+      "dependsOn": [
+        "asset:request-voice",
+        "asset:return-voice"
+      ]
+    },
+    {
+      "id": "final",
+      "kind": "video",
+      "producer": "video-production",
+      "path": "artifacts/final.txt",
+      "sha256": null,
+      "source": "portable example; planned artifact only",
+      "dependsOn": [
+        "asset:mix",
+        "asset:request-clip",
+        "asset:return-clip",
+        "asset:request-captions",
+        "asset:return-captions"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "request-alignment",
+      "question": "字幕是否与最终旁白逐句对应？",
+      "required": true,
+      "dependsOn": [
+        "asset:request-captions",
+        "asset:request-voice"
+      ]
+    },
+    {
+      "id": "return-alignment",
+      "question": "字幕是否与最终旁白逐句对应？",
+      "required": true,
+      "dependsOn": [
+        "asset:return-captions",
+        "asset:return-voice"
+      ]
+    },
+    {
+      "id": "playback",
+      "question": "完整音画播放是否符合分镜且无截断？",
+      "required": true,
+      "dependsOn": [
+        "asset:final"
+      ]
+    }
+  ],
+  "approvals": []
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "project": "演示项目（虚构数据）",
+  "currency": "USD",
+  "coverage": "partial",
+  "budgetUSD": 10,
+  "entries": [
+    {"provider": "demo-api", "id": "paid-01", "category": "视频", "actualUSD": 0.2, "estimatedUSD": 0.25, "reservedUSD": 0.3, "billingEvidence": "synthetic fixture, not a real invoice", "source": "synthetic example"},
+    {"provider": "demo-vlm", "id": "review-01", "category": "审阅", "estimatedUSD": 0.04, "source": "synthetic usage estimate"},
+    {"provider": "demo-image", "id": "image-unknown", "category": "图片", "actualUSD": null, "estimatedUSD": null, "source": "synthetic missing billing"},
+    {"provider": "demo-api", "id": "next-01", "category": "视频", "phase": "planned", "quantity": 6, "unitRateUSD": 0.01, "unit": "output seconds", "rateSource": "synthetic rate, not a live provider quote", "rateDate": "2026-09-07", "source": "synthetic next-shot plan"}
+  ]
+}

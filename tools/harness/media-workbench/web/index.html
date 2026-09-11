@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="media-token" content="__TOKEN__"><title>Vapor 创作工作台</title><link rel="stylesheet" href="/media-workbench/app.css"><link rel="stylesheet" href="/media-workbench/canvas.css"></head>
+<body><link rel="stylesheet" href="/media-workbench/workspaces.css"><main>
+<header><div class="brand-row"><div class="eyebrow"><span class="brand-mark" aria-hidden="true">◈</span>VAPOR</div><span class="mode-badge">创作空间</span></div><h1>想象成形。<br><span>每一帧，都在这里。</span></h1><p>从第一个灵感，到最后一次精修。</p><div id="connection" role="status">正在连接本地项目…</div></header>
+<section class="summary"><span id="count"></span><span id="budget"></span></section>
+<nav id="workspace-nav" aria-label="工作区域"></nav>
+<div id="error" role="alert"></div>
+<section id="workspace-board">
+<div class="library-heading"><h2>我的作品</h2><span></span></div>
+<nav aria-label="产物筛选" id="filters"></nav>
+<details class="local-render"><summary>测试与诊断</summary><div class="toolbar"><h2>本地渲染实验室</h2><button id="render-demo" disabled>渲染 3 秒测试卡</button></div><p class="note">固定标题卡 · 720p · 无外部素材 · 本地计算，不调用付费服务</p><div id="render-jobs"></div></details>
+<details class="job-history"><summary>已有生成任务与费用状态</summary><section id="jobs" aria-label="生成任务"></section></details>
+<section id="artifacts" aria-label="产物列表"></section>
+<section id="detail" class="detail" hidden aria-label="选中产物详情"></section>
+</section>
+<section id="workspace-library" hidden aria-label="素材库"><h2>素材库</h2><p class="note">项目中的已登记素材。尚未核实下载来源与许可证，不代表可商用。</p><div id="library-capabilities"></div><div id="library-items"></div></section>
+<section id="workspace-lab" hidden aria-label="Lab"><h2>灵感提取</h2><p class="note">将已有素材转化为可复用特征。提取的 prompt 是重建描述，不是原始提示词。</p><label for="lab-source">来源版本</label><select id="lab-source"></select><div id="lab-reference" class="reference"></div><div id="lab-capabilities"></div><p class="note">下方本地声音区支持片段准备、分离试听与声音档案保存。视觉与动作提取仍未接通；声音描述不等于可用于合成的声音模型。</p></section>
+<footer><span>VAPOR</span><span>保留原文件与版本 · 远程任务按次审批 · 审阅状态单独记录</span></footer>
+</main><script type="module" src="/media-workbench/app.js"></script></body></html>

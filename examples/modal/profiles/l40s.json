@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "smoke-l40s",
+  "task": "gpu-smoke",
+  "gpu": "L40S",
+  "budgetUSD": 1.0,
+  "estimatedUSD": 0.1,
+  "reservedUSD": 0.5,
+  "pricingSource": "ILLUSTRATIVE ONLY: verify L40S GPU, CPU, RAM and runtime at https://modal.com/pricing",
+  "priceValidThrough": "2000-01-01",
+  "pricingGPU": "L40S"
+}

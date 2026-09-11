@@ -1,0 +1,24 @@
+[
+  {
+    "id": "costs.report",
+    "script": "tools/costs/report.py",
+    "args": [],
+    "fields": {
+      "manifest": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--manifest",
+        "path": true
+      }
+    },
+    "required": [
+      "manifest"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "output"
+    },
+    "description": "costs report"
+  }
+]

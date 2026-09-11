@@ -1,0 +1,44 @@
+{
+  "name": "@toddzheng024/vapor-gpu-modal",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "peerDependencies": {
+    "@toddzheng024/vapor": "0.3.0"
+  },
+  "description": "gpu.execute",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "hub": {
+      "displayName": "vapor-gpu-modal",
+      "summary": "Vapor gpu modal tool operations",
+      "compatibility": {
+        "dsh": "0.1.5-rc.1",
+        "platforms": [
+          "darwin",
+          "linux"
+        ]
+      },
+      "entryIds": [
+        "vapor-gpu-modal"
+      ],
+      "after": [
+        "@toddzheng024/vapor"
+      ],
+      "channel": "beta"
+    }
+  },
+  "license": "MIT"
+}

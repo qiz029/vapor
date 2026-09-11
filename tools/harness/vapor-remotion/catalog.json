@@ -1,0 +1,313 @@
+[
+  {
+    "id": "remotion.validate",
+    "script": "tools/video/remotion/cli.ts",
+    "args": [
+      "validate"
+    ],
+    "fields": {
+      "manifest": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--manifest",
+        "path": true
+      },
+      "frame": {
+        "type": "integer",
+        "flag": "--frame",
+        "minimum": 0
+      }
+    },
+    "required": [
+      "manifest"
+    ],
+    "output": null,
+    "description": "remotion validate",
+    "engine": "node"
+  },
+  {
+    "id": "remotion.render",
+    "script": "tools/video/remotion/cli.ts",
+    "args": [
+      "render"
+    ],
+    "fields": {
+      "manifest": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--manifest",
+        "path": true
+      },
+      "frame": {
+        "type": "integer",
+        "flag": "--frame",
+        "minimum": 0
+      }
+    },
+    "required": [
+      "manifest"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "output"
+    },
+    "description": "remotion render",
+    "engine": "node"
+  },
+  {
+    "id": "remotion.still",
+    "script": "tools/video/remotion/cli.ts",
+    "args": [
+      "still"
+    ],
+    "fields": {
+      "manifest": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--manifest",
+        "path": true
+      },
+      "frame": {
+        "type": "integer",
+        "flag": "--frame",
+        "minimum": 0
+      }
+    },
+    "required": [
+      "manifest"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "output"
+    },
+    "description": "remotion still",
+    "engine": "node"
+  },
+  {
+    "id": "remotion.music-video",
+    "script": "tools/video/remotion/render-mv.ts",
+    "args": [],
+    "fields": {
+      "manifest": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": null,
+        "path": true
+      },
+      "mode": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": null,
+        "enum": [
+          "render",
+          "still"
+        ]
+      },
+      "frame": {
+        "type": "integer",
+        "flag": null,
+        "minimum": 0
+      }
+    },
+    "required": [
+      "manifest"
+    ],
+    "output": {
+      "name": "output"
+    },
+    "description": "remotion music-video",
+    "engine": "node",
+    "mv": "music-video"
+  },
+  {
+    "id": "remotion.kinetic-mv",
+    "script": "tools/video/remotion/render-mv.ts",
+    "args": [],
+    "fields": {
+      "manifest": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": null,
+        "path": true
+      },
+      "mode": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": null,
+        "enum": [
+          "render",
+          "still"
+        ]
+      },
+      "frame": {
+        "type": "integer",
+        "flag": null,
+        "minimum": 0
+      }
+    },
+    "required": [
+      "manifest"
+    ],
+    "output": {
+      "name": "output"
+    },
+    "description": "remotion kinetic-mv",
+    "engine": "node",
+    "mv": "kinetic-mv"
+  },
+  {
+    "id": "remotion.lyric-driven-mv",
+    "script": "tools/video/remotion/render-mv.ts",
+    "args": [],
+    "fields": {
+      "manifest": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": null,
+        "path": true
+      },
+      "mode": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": null,
+        "enum": [
+          "render",
+          "still"
+        ]
+      },
+      "frame": {
+        "type": "integer",
+        "flag": null,
+        "minimum": 0
+      }
+    },
+    "required": [
+      "manifest"
+    ],
+    "output": {
+      "name": "output"
+    },
+    "description": "remotion lyric-driven-mv",
+    "engine": "node",
+    "mv": "lyric-driven-mv"
+  },
+  {
+    "id": "remotion.editorial-mv",
+    "script": "tools/video/remotion/render-mv.ts",
+    "args": [],
+    "fields": {
+      "manifest": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": null,
+        "path": true
+      },
+      "mode": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": null,
+        "enum": [
+          "render",
+          "still"
+        ]
+      },
+      "frame": {
+        "type": "integer",
+        "flag": null,
+        "minimum": 0
+      }
+    },
+    "required": [
+      "manifest"
+    ],
+    "output": {
+      "name": "output"
+    },
+    "description": "remotion editorial-mv",
+    "engine": "node",
+    "mv": "editorial-mv"
+  },
+  {
+    "id": "remotion.chorus-editorial",
+    "script": "tools/video/remotion/render-mv.ts",
+    "args": [],
+    "fields": {
+      "manifest": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": null,
+        "path": true
+      },
+      "mode": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": null,
+        "enum": [
+          "render",
+          "still"
+        ]
+      },
+      "frame": {
+        "type": "integer",
+        "flag": null,
+        "minimum": 0
+      }
+    },
+    "required": [
+      "manifest"
+    ],
+    "output": {
+      "name": "output"
+    },
+    "description": "remotion chorus-editorial",
+    "engine": "node",
+    "mv": "chorus-editorial"
+  },
+  {
+    "id": "video.animatic",
+    "script": "tools/video/animatic.py",
+    "args": [],
+    "fields": {
+      "project": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--project",
+        "path": true
+      },
+      "plan": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8000,
+        "flag": "--plan",
+        "path": true
+      },
+      "prepareOnly": {
+        "type": "boolean",
+        "flag": "--prepare-only"
+      }
+    },
+    "required": [
+      "project",
+      "plan"
+    ],
+    "output": {
+      "flag": "--out",
+      "name": "output"
+    },
+    "description": "video animatic"
+  }
+]

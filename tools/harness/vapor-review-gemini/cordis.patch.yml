@@ -1,0 +1,3 @@
+- insert:
+    - id: vapor-review-gemini
+      name: '@toddzheng024/vapor-review-gemini'
