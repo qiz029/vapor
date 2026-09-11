@@ -24,7 +24,8 @@ const manifests=[];for(const item of release.packages){
  });
  if(item.files.some(file=>file.includes('tools/vendor/video-use/'))&&!notices.some(n=>n.path.endsWith('tools/vendor/video-use/LICENSE')))throw new Error('Missing video-use license: '+item.name);
  licenseInventory.push({name:p.name,version:p.version,declaredLicense:p.license??null,notices,declaredDependencies:p.dependencies??{},pythonRequirements:item.files.filter(f=>f.endsWith('requirements.txt'))});
- if(p.version!==release.version||!p.private)throw new Error('Unexpected candidate manifest');
+ if(p.version!==release.version||p.private!==!release.publishable)throw new Error('Unexpected candidate manifest');
+ if(release.publishable&&(p.license!=='MIT'||!p.repository?.url||p.publishConfig?.access!=='public'||p.publishConfig?.tag!=='beta'))throw new Error('Incomplete public release metadata');
  if(hub){(p.dsh.profile?hub.dshProfileManifestSchema:hub.dshPackageManifestSchema).parse(p);hub.hubListingSchema.parse(p.dsh.hub);}
  for(const file of item.files)if(/(?:^|\/)(?:\.env|\.credentials|models|voices|dev-home|__pycache__)(?:\/|$)/.test(file)||file.endsWith('.pyc'))throw new Error('Private/nonportable payload');
  const catalog=join(candidate,folder,'catalog.json');if(existsSync(catalog))for(const o of JSON.parse(readFileSync(catalog)))if(!existsSync(join(candidate,folder,'resources',o.script)))throw new Error('Missing executable '+o.script);
