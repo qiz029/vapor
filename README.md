@@ -4,7 +4,7 @@ A project-based AIGC workspace built on DeepSeek Harness. Each project has a per
 
 ## Status
 
-Pre-release. npm packages and the Vapor Hub profile are not yet published. Do not install similarly named packages as substitutes. Current validation covers local installation, Remotion rendering, project recovery, and plugin installation/rollback. Remote provider coverage remains separate.
+Pre-release. npm packages and the Vapor Hub profile are not yet published. Do not install similarly named packages as substitutes. Current validation covers local installation, Remotion rendering, project recovery, and plugin installation/rollback. A real two-turn DeepSeek chat also generated and revised one artifact through the local Remotion plugin, preserved both versions, and recovered them after restart. General remote-provider coverage remains separate.
 
 ## Build a local candidate
 
@@ -17,6 +17,10 @@ node tools/harness/distribution/archive.mjs outputs/candidate outputs/vapor-loca
 ```
 
 Follow `outputs/candidate/README.md` for installation. FFmpeg, Chromium and the Python requirements of selected plugins must be installed separately. Configure credentials in **Settings → 能力插件**. No credentials, private media, model weights or user projects are included here.
+
+## Verification
+
+The standalone source builds all 18 candidate packages and passes package integrity checks. Tests: 83 passed, 2 skipped (workstation-only skill catalog and optional macOS voice preparation). Native UI plugin install/activation/rollback and version playback were exercised. Frame sampling and playback completion do not constitute full creative acceptance.
 
 ## Source layout
 
