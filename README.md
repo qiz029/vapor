@@ -4,7 +4,7 @@ A project-based AIGC workspace built on DeepSeek Harness. Each project has a per
 
 ## Status
 
-Pre-release. All 18 npm packages are published at version `0.3.0` with the `beta` tag. Public version metadata matches the release checksums. Clean npm installation is still being verified; the Vapor Hub profile is not yet published. Current validation covers local installation, Remotion rendering, project recovery, and plugin installation/rollback. A real two-turn DeepSeek chat also generated and revised one artifact through the local Remotion plugin, preserved both versions, and recovered them after restart. General remote-provider coverage remains separate.
+Pre-release. All 18 npm packages are published at version `0.3.0` with the `beta` tag. Public version metadata matches the release checksums. Clean npm installation with `--ignore-scripts` passed. The public Hub profile `vapor-studio@0.3.0` is published. Hub profile installation remains under validation: current pnpm installation can fail with `ERR_PNPM_IGNORED_BUILDS` for esbuild; do not treat publication as a passing Hub installation test. Current validation covers local installation, Remotion rendering, project recovery, and plugin installation/rollback. A real two-turn DeepSeek chat also generated and revised one artifact through the local Remotion plugin, preserved both versions, and recovered them after restart. General remote-provider coverage remains separate.
 
 ## Build a local candidate
 
